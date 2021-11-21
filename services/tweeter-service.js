@@ -2,7 +2,7 @@ let tweets = require('../data/tweets.json');
 
 module.exports = (app) => {
 
-    const findAllTweets = (req, res) => {
+    const fetchAllTweets = (req, res) => {
         res.json(tweets);
     }
 
@@ -66,6 +66,6 @@ module.exports = (app) => {
     app.post('/api/tweets', postNewTweet);
 
 
-    app.get('/api/tweets', findAllTweets);
+    app.get('/api/tweets', fetchAllTweets);
 };
 
