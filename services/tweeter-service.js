@@ -36,6 +36,7 @@ module.exports = (app) => {
     const postNewTweet = (req, res) => {
         const newTweet = {
             _id: (new Date()).getTime() + '',
+
             "topic": "Web Development",
             "userName": "ReactJS",
             "verified": false,
@@ -44,13 +45,12 @@ module.exports = (app) => {
             "avatar-image": "../../../images/react-blue.png",
             "logo-image": "../../../images/react-blue.png",
             "stats": {
-                "comments": 123,
+                "comments": 1,
                 "retweets": 234,
                 "likes": 345
             },
             ...req.body,
         }
-        newTweet['_id'] = (new Date()).getTime();
 
         tweets = [
             newTweet,
@@ -63,7 +63,7 @@ module.exports = (app) => {
 
     app.post('/api/tweets', postNewTweet);
 
-    app.post('/api/tweets', postNewTweet);
+    // app.post('/api/tweets/', postNewTweet);
 
 
     app.get('/api/tweets', fetchAllTweets);
