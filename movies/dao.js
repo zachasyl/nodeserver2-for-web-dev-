@@ -15,7 +15,7 @@ const updateMovie = (id, movie) =>
 
 
 const deleteMovie = (id) =>
-    model.removeOne({_id: id});
+    model.deleteOne({_id: id});
 
 module.exports = {
     findAllMovies, deleteMovie, createMovie, findMovieById, updateMovie

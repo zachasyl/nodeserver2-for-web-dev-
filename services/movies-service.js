@@ -30,6 +30,6 @@ module.exports = (app) => {
 
     app.put('/api/movies/:mid', saveMovie);
     app.post('/api/movies', createMovie);
-    app.delete('/api/movies/:id', deleteMovie);
+    app.delete('/api/movies/:_id', deleteMovie);
     app.get('/api/movies', getAllMovies);
 };
